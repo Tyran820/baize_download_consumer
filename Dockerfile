@@ -10,9 +10,6 @@ COPY baize_download_consumer.py /app/baize_download_consumer.py
 # 安装程序所需的依赖库
 RUN pip install pika aria2p
 
-# 暴露aria2的RPC端口
-EXPOSE 6800
-
 # 设置环境变量的默认值（如果需要，可以在docker-compose或运行时进行覆盖）
 ENV RABBITMQ_HOST=localhost \
     RABBITMQ_PORT=5672 \
